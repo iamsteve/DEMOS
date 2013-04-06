@@ -1,0 +1,41 @@
+// DEMOS v1.0
+// Copyright 2012, Stephen Lubbock
+// www.getdemos.co.uk
+// Based upon Skeleton Copyright 2011, Dave Gamache
+
+// #Percentage
+// ==================================================
+
+	.container {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+		
+		.column, .columns {
+	  	float: left;
+	  	display: inline;
+	  	margin-left: 1%;
+	  	margin-right: 1%;
+	  }
+	  
+	  // Base Grid + Offets
+	  $i: 1;
+	  @for $i from 1 through $percentIteration {
+			.percent#{$percentMin}.column, .percent#{$percentMin}.columns { width: percentage(($percentMin - 2)/100); }
+			.offset-by-percent#{$percentMin} { padding-left: percentage($percentMin/100); }
+			
+			$percentMin: $percentMin + $percentIncrement;
+			$i: $i + 1;
+		}
+	
+		// Thirds
+		.one-third.column     		{ width: 31%; }
+		.two-thirds.column      	{ width: 61%; }
+	}
+	
+	.row							{ margin-bottom: 20px; }
+	
+	// Nested Column Classes
+	.column.alpha, .columns.alpha	{ margin-left: 0; }
+	.column.omega, .columns.omega	{ margin-right: 0; }

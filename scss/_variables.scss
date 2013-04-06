@@ -6,6 +6,7 @@
 // Table of Content
 // ==================================================
 //	#Global Variables
+//	#Percentage Variables
 
 // #Global Variables
 // ==================================================
@@ -15,3 +16,12 @@
 	$maxColumn: $maxWidth / $columns;
 	
 	$columnNames: "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve";
+	
+// #Percentage Variables
+// ==================================================
+
+	$percentIncrement: 5;
+	$percentMin: 5;
+	$percentMax: 100;
+	$percentIteration: $percentMax / $percentIncrement;
+	

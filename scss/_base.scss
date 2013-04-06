@@ -89,6 +89,11 @@
 		p img {
 			margin: 0;
 		}
+		
+		&:last-child {
+			margin-bottom: 0px;
+		}
+		
 	}
 	
 	p.lead { font-size: 21px; line-height: 27px; }

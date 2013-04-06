@@ -1,0 +1,43 @@
+// DEMOS v1.0
+// Copyright 2012, Stephen Lubbock
+// www.getdemos.co.uk
+// Based upon Skeleton Copyright 2011, Dave Gamache
+
+// #Website 960px
+// ==================================================
+
+    @media only screen and (min-width: 960px) and (max-width: $maxWidth - 1 ) {
+	    .container {
+	    	position: relative;
+	    	width: 960px;
+	    	margin: 0 auto;
+	    	padding: 0;
+	    	
+		    .container .column, .container .columns {
+		    	float: left;
+		    	display: inline;
+		    	margin-left: 10px;
+		    	margin-right: 10px;
+		    }
+		    
+		    // Base Grid + Offets
+		    $i: 1;
+		    @each $name in $columnNames {
+	    		.#{$name}.column, .#{$name}.columns { width: (80px * $i) - 20; }
+	    		.offset-by-#{$name} { padding-left: 80px * $i; }
+	    		$i: $i + 1;
+	    	}
+	    	$i: $i - 1;
+	    
+	    	// Thirds
+	    	.one-third.column     		{ width: 300px; }
+	    	.two-thirds.column      	{ width: 620px; }
+		}
+		
+		.row							{ margin-bottom: 20px; }
+	
+		// Nested Column Classes
+		.column.alpha, .columns.alpha	{ margin-left: 0; }
+		.column.omega, .columns.omega	{ margin-right: 0; }
+		
+    }

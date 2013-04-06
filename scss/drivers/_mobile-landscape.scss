@@ -1,0 +1,32 @@
+// DEMOS v1.0
+// Copyright 2012, Stephen Lubbock
+// www.getdemos.co.uk
+// Based upon Skeleton Copyright 2011, Dave Gamache
+
+// #Mobile (Landscape)
+// ==================================================
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .container {
+        	width: 420px;
+        	
+        	.columns, .column {
+        		margin: 0;
+        	}
+
+        	// Base Grid + Offets
+	    	$i: 1;
+	    	@each $name in $columnNames {
+	    		.#{$name}.column, .#{$name}.columns { width: 420px; }
+	    		.offset-by-#{$name} { padding-left: 0px; }
+	    		$i: $i + 1;
+	    	}
+	    	$i: $i - 1;
+	    	
+	    	// Thirds
+        	.one-third.column,
+        	.two-thirds.column			{ width: 420px; }
+        	
+        	form .columns, form .column	{ margin-bottom: 20px; }
+        }
+    }
