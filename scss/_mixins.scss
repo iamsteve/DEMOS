@@ -1,0 +1,49 @@
+// DEMOS v1.0
+// Copyright 2012, Stephen Lubbock
+// www.getdemos.co.uk
+// Based upon Skeleton Copyright 2011, Dave Gamache
+
+// Table of Content
+// ==================================================
+//	#Mixins
+
+// Mixins
+// ==================================================
+  
+  // CSS3 Gradient
+  @mixin gradient($from, $to) {
+    background-color: $from; 
+    background-image: -moz-linear-gradient($from, $to);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+    background-image: -webkit-linear-gradient($from, $to);
+    background-image: -o-linear-gradient($from, $to);
+  }
+  
+  // CSS3 Border Radius
+  @mixin border-radius($radius: 1px) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+            border-radius: $radius;
+  }
+  
+  // CSS3 Box Shadow
+  @mixin box-shadow($values...){
+    -webkit-box-shadow: $values;
+    -moz-box-shadow: $values;
+    box-shadow: $values;
+  }
+  
+  // CSS3 Text shadow
+  @mixin text-shadow($shadow...) {
+    -webkit-text-shadow: $shadow;
+    -moz-text-shadow: $shadow;
+    -o-text-shadow: $shadow;
+    text-shadow: $shadow;
+  }
+  
+  //CSS3 Columns
+  @mixin column-count($column: 2) {
+    -moz-column-count: $column;
+    -webkit-column-count: $column;
+    column-count: $column;
+  }
