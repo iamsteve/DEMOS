@@ -3,8 +3,10 @@
 // www.getdemos.co.uk
 // Based upon Skeleton Copyright 2011, Dave Gamache
 
-// #Percentage
+// #Percentage-Tablet
 // ==================================================
+
+@media only screen and (max-width: 959px) {
 
 	.container {
 		position: relative;
@@ -24,8 +26,9 @@
 	  $relPercentMin: $percentMin;
 	  
 	  @for $i from 1 through $percentIteration {
-			.percent-#{$relPercentMin}.column, .percent-#{$relPercentMin}.columns { width: percentage(($relPercentMin - 2)/100); }
-			.offset-by-percent-#{$relPercentMin} { padding-left: percentage($relPercentMin/100); }
+	  
+			.percent-#{$relPercentMin}.column, .percent-#{$relPercentMin}.columns { width: 98%; }
+			.offset-by-percent-#{$relPercentMin} { padding-left: 0%; }
 			
 			$relPercentMin: $relPercentMin + $percentIncrement;
 			$i: $i + 1;
@@ -41,3 +44,5 @@
 	// Nested Column Classes
 	.column.alpha, .columns.alpha	{ margin-left: 0; }
 	.column.omega, .columns.omega	{ margin-right: 0; }
+
+}
