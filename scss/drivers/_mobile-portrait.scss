@@ -6,7 +6,7 @@
 // #Mobile (Portrait)
 // ==================================================
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 480px) {
         .container {
         	width: 300px;
         	
@@ -27,6 +27,6 @@
 	        .one-third.column,
 	        .two-thirds.column			{ width: 300px; }
 			
-			form .columns, form .column	{ margin-bottom: 20px; }
+	        form .columns, form .column	{ margin-bottom: 20px; }
         }
     }

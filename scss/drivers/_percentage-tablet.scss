@@ -6,7 +6,7 @@
 // #Percentage-Tablet
 // ==================================================
 
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 767px) {
 
 	.container {
 		position: relative;
@@ -21,22 +21,18 @@
 	  	margin-right: 1%;
 	  }
 	  
-	  // Base Grid + Offets
-	  $i: 1;
-	  $relPercentMin: $percentMin;
-	  
-	  @for $i from 1 through $percentIteration {
-	  
-			.percent-#{$relPercentMin}.column, .percent-#{$relPercentMin}.columns { width: 98%; }
-			.offset-by-percent-#{$relPercentMin} { padding-left: 0%; }
-			
-			$relPercentMin: $relPercentMin + $percentIncrement;
-			$i: $i + 1;
-		}
-	
+    	// Base Grid + Offets
+    	$i: 1;
+    	@each $name in $columnNames {
+    		.#{$name}.column, .#{$name}.columns { width: 98% }
+    		.offset-by-#{$name} { padding-left: 0%; }
+    		$i: $i + 1;
+    	}
+    	$i: $i - 1;
+
 		// Thirds
-		.one-third.column     		{ width: 31%; }
-		.two-thirds.column      	{ width: 61%; }
+		.one-third.column     		{ width: 98%; }
+		.two-thirds.column      	{ width: 98%; }
 	}
 	
 	.row							{ margin-bottom: 20px; }
