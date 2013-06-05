@@ -32,7 +32,9 @@ table {
   border-spacing: 0; }
 
 body {
-  font: 14px/21px "Helvetica", Arial, sans-serif;
+  font-size: 0.875em;
+  line-height: 1.5em;
+  font-family: "Helvetica", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
@@ -44,34 +46,34 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: inherit; }
 
 h1 {
-  font-size: 46px;
-  line-height: 50px;
-  margin-bottom: 14px; }
+  font-size: 2.875em;
+  line-height: 1.5em;
+  margin-bottom: 12px; }
 
 h2 {
-  font-size: 35px;
-  line-height: 40px;
+  font-size: 2.1875em;
+  line-height: 1.5em;
   margin-bottom: 10px; }
 
 h3 {
-  font-size: 28px;
-  line-height: 34px;
+  font-size: 1.75em;
+  line-height: 1.5em;
   margin-bottom: 8px; }
 
 h4 {
-  font-size: 21px;
-  line-height: 30px;
+  font-size: 1.3125em;
+  line-height: 1.5em;
   margin-bottom: 8px; }
 
 h5 {
-  font-size: 17px;
-  line-height: 24px;
-  margin-bottom: 8px; }
+  font-size: 1.0625em;
+  line-height: 1.5em;
+  margin-bottom: 6px; }
 
 h6 {
-  font-size: 14px;
-  line-height: 21px;
-  margin-bottom: 8px; }
+  font-size: 0.875em;
+  line-height: 1.5em;
+  margin-bottom: 4px; }
 
 p {
   margin: 0 0 20px 0; }
@@ -81,8 +83,8 @@ p {
     margin-bottom: 0px; }
 
 p.lead {
-  font-size: 21px;
-  line-height: 27px; }
+  font-size: 1.3125em;
+  line-height: 1.5em; }
 
 em {
   font-style: italic; }
@@ -91,7 +93,7 @@ strong {
   font-weight: bold; }
 
 small {
-  font-size: 80%; }
+  font-size: .8em; }
 
 hr {
   border: solid #ddd;
@@ -102,6 +104,8 @@ hr {
 
 ul, ol {
   margin-bottom: 20px; }
+  ul:last-child, ol:last-child {
+    margin-bottom: 0px; }
 
 ul {
   list-style: none outside; }
@@ -124,7 +128,7 @@ ul.disc {
 ul ul, ul ol,
 ol ol, ol ul {
   margin: 4px 0 5px 30px;
-  font-size: 90%; }
+  font-size: .9em; }
 
 ul ul li, ul ol li,
 ol ol li, ol ul li {
@@ -140,8 +144,12 @@ ul.large li {
 li p {
   line-height: 21px; }
 
-img.scale-with-grid {
+img.scale-down {
   max-width: 100%;
+  height: auto; }
+
+img.scale-up {
+  min-width: 100%;
   height: auto; }
 
 form {
@@ -192,47 +200,48 @@ textarea {
 label, legend {
   display: block;
   font-weight: bold;
-  font-size: 13px; }
+  font-size: 0.8125em;
+  line-height: 1.5em; }
 
 input[type="checkbox"] {
   display: inline; }
 
 label span, legend span {
   font-weight: normal;
-  font-size: 13px; }
+  font-size: 0.8125em;
+  line-height: 1.5em; }
 
 table {
   width: 100%; }
   table tr {
     background: #FFF; }
     table tr:nth-child(even) {
-      background: #F9F9F9; }
+      background: #F1F1F1; }
     table tr td, table tr th {
       padding: 10px; }
       table tr td input[type="text"], table tr td input[type="password"], table tr td input[type="email"], table tr td input[type="date"], table tr td textarea, table tr td select, table tr th input[type="text"], table tr th input[type="password"], table tr th input[type="email"], table tr th input[type="date"], table tr th textarea, table tr th select {
         margin-bottom: 0px; }
     table tr th {
-      border-bottom: 1px solid #F6F6F6;
-      border-right: 1px solid #F6F6F6; }
+      border-bottom: 1px solid #E1E1E1;
+      border-right: 1px solid #E1E1E1; }
       table tr th:last-child {
         border-right: none; }
 
 .error, .success, .notification {
   display: block;
-  padding: 10px;
-  margin-bottom: 20px; }
+  padding: 15px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bold; }
 
 .error {
-  border: 1px solid #ff7d7d;
-  background: #ffd7d7; }
+  background: #d02a2a; }
 
 .success {
-  border: 1px solid #8bd475;
-  background: #e0ffd7; }
+  background: #88d02a; }
 
 .notification {
-  border: 1px solid #c5bb62;
-  background: #fffbd7; }
+  background: #ffa800; }
 
 .columns + .chzn-container, .column + .chzn-container {
   margin-left: 10px;
@@ -556,6 +565,78 @@ table {
   .columns + .chzn-container, .column + .chzn-container, .columns.alpha + .chzn-container, .column.alpha + .chzn-container, .columns.omega + .chzn-container, .column.omega + .chzn-container {
     margin-left: 0px;
     margin-right: 0px; } }
+.container {
+  position: relative;
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0; }
+  .container .column, .container .columns {
+    float: left;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px; }
+  .container .one.column, .container .one.columns {
+    width: 75px; }
+  .container .offset-by-one {
+    padding-left: 95px; }
+  .container .two.column, .container .two.columns {
+    width: 170px; }
+  .container .offset-by-two {
+    padding-left: 190px; }
+  .container .three.column, .container .three.columns {
+    width: 265px; }
+  .container .offset-by-three {
+    padding-left: 285px; }
+  .container .four.column, .container .four.columns {
+    width: 360px; }
+  .container .offset-by-four {
+    padding-left: 380px; }
+  .container .five.column, .container .five.columns {
+    width: 455px; }
+  .container .offset-by-five {
+    padding-left: 475px; }
+  .container .six.column, .container .six.columns {
+    width: 550px; }
+  .container .offset-by-six {
+    padding-left: 570px; }
+  .container .seven.column, .container .seven.columns {
+    width: 645px; }
+  .container .offset-by-seven {
+    padding-left: 665px; }
+  .container .eight.column, .container .eight.columns {
+    width: 740px; }
+  .container .offset-by-eight {
+    padding-left: 760px; }
+  .container .nine.column, .container .nine.columns {
+    width: 835px; }
+  .container .offset-by-nine {
+    padding-left: 855px; }
+  .container .ten.column, .container .ten.columns {
+    width: 930px; }
+  .container .offset-by-ten {
+    padding-left: 950px; }
+  .container .eleven.column, .container .eleven.columns {
+    width: 1025px; }
+  .container .offset-by-eleven {
+    padding-left: 1045px; }
+  .container .twelve.column, .container .twelve.columns {
+    width: 1120px; }
+  .container .offset-by-twelve {
+    padding-left: 1140px; }
+  .container .one-third.column {
+    width: 360px; }
+  .container .two-thirds.column {
+    width: 740px; }
+
+.row {
+  margin-bottom: 20px; }
+
+.column.alpha, .columns.alpha {
+  margin-left: 0; }
+
+.column.omega, .columns.omega {
+  margin-right: 0; }
+
 .container:after {
   content: "\0020";
   display: block;
