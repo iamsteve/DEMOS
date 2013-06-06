@@ -10,6 +10,13 @@
 // Mixins
 // ==================================================
   
+  // Converts font size to em relative to body font size and calculate line-height
+  @mixin font-size($value) {
+    $value: 1+(($value - 16)/16);
+    font-size: $value+em;
+    line-height: 1.5em;
+  }
+  
   // CSS3 Gradient
   @mixin gradient($from, $to) {
     background-color: $from; 

@@ -22,7 +22,7 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-size: 100%;
+		font-size: $baseFontSize;
 		font: inherit;
 		vertical-align: baseline;
 	}
@@ -56,15 +56,9 @@
 
 // #Typography
 // ==================================================
-
-  @mixin fontForm($value) {
-    $value: 1+(($value - 16)/16);
-    font-size: $value+em;
-    line-height: 1.5em;
-  }
   
   body {
-    @include fontForm(14);
+    @include font-size($bodyFontSize);
     font-family: "Helvetica", Arial, sans-serif;
     -webkit-font-smoothing: antialiased; // Fix for webkit rendering
     -webkit-text-size-adjust: 100%;
@@ -79,12 +73,12 @@
 		font-weight: inherit;
 	}
 	
-	h1 { @include fontForm(46); margin-bottom: 12px; }
-	h2 { @include fontForm(35); margin-bottom: 10px; }
-	h3 { @include fontForm(28); margin-bottom: 8px; }
-	h4 { @include fontForm(21); margin-bottom: 8px; }
-	h5 { @include fontForm(17); margin-bottom: 6px; }
-	h6 { @include fontForm(14); margin-bottom: 4px; }
+	h1 { @include font-size($h1FontSize); margin-bottom: 0px; }
+	h2 { @include font-size($h2FontSize); margin-bottom: 0px; }
+	h3 { @include font-size($h3FontSize); margin-bottom: 0px; }
+	h4 { @include font-size($h4FontSize); margin-bottom: 0px; }
+	h5 { @include font-size($h5FontSize); margin-bottom: 0px; }
+	h6 { @include font-size($h6FontSize); margin-bottom: 0px; }
 
 	p {
 		margin: 0 0 20px 0;
@@ -96,7 +90,7 @@
 		}
 	}
 	
-	p.lead { @include fontForm(21) }
+	p.lead { font-size: 1.3em; line-height: 1.5em; }
 
 	em { font-style: italic; }
 	strong { font-weight: bold; }
@@ -198,7 +192,7 @@
 	label, legend {
 		display: block;
 		font-weight: bold;
-		@include fontForm(13);
+		@include font-size(13);
 	}
 	
 	input[type="checkbox"] {
@@ -207,7 +201,7 @@
 	
 	label span, legend span {
 		font-weight: normal;
-		@include fontForm(13);
+		@include font-size(13);
 	}
 	
 // #Tables
