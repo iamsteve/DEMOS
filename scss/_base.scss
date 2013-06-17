@@ -73,12 +73,12 @@
 		font-weight: inherit;
 	}
 	
-	h1 { @include font-size($h1FontSize); margin-bottom: 0px; }
-	h2 { @include font-size($h2FontSize); margin-bottom: 0px; }
-	h3 { @include font-size($h3FontSize); margin-bottom: 0px; }
-	h4 { @include font-size($h4FontSize); margin-bottom: 0px; }
-	h5 { @include font-size($h5FontSize); margin-bottom: 0px; }
-	h6 { @include font-size($h6FontSize); margin-bottom: 0px; }
+	h1 { @include font-size($h1FontSize); line-height: 1em; margin-bottom: 0px; }
+  h2 { @include font-size($h2FontSize); line-height: 1.1em; margin-bottom: 0px; }
+  h3 { @include font-size($h3FontSize); line-height: 1.2em; margin-bottom: 0px; }
+  h4 { @include font-size($h4FontSize); line-height: 1.3em; margin-bottom: 0px; }
+  h5 { @include font-size($h5FontSize); line-height: 1.4em; margin-bottom: 0px; }
+  h6 { @include font-size($h6FontSize); line-height: 1.5em; margin-bottom: 0px; }
 
 	p {
 		margin: 0 0 20px 0;
