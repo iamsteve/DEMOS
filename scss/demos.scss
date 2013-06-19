@@ -11,14 +11,17 @@
 
 // #Imports
 // ==================================================
-	@import "variables", "mixins", "base", "chosen";
+
+	@import "includes/variables";
+	@import "includes/mixins";
+	@import "includes/chosen";
+
+  //DEMOS Theming	
+	@import "themes/base";
 	
 // #Drivers
 // ==================================================
-	
-	// Percentage Grid - No gutter
-	//@import "drivers/percentage-no-margin.scss";
-	
+
 	// Percentage Grid
 	//@import "drivers/percentage.scss";
   //@import "drivers/percentage-tablet.scss";
