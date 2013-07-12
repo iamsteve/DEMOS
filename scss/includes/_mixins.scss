@@ -54,3 +54,12 @@
     -webkit-column-count: $column;
     column-count: $column;
   }
+  
+  //CSS Transition
+  @mixin transition($value...) {
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -ms-transition: $value;
+    -o-transition: $value;
+    transition: $value;
+  }

@@ -6,7 +6,9 @@
 // Table of Contents
 // ==================================================
 //  #Imports
+//  #Theme Variables
 //	#Reset & Basics
+//  #Buttons
 //	#Typography
 //	#Lists
 //	#Images
@@ -20,6 +22,15 @@
   
    @import "includes/variables";
    @import "includes/mixins";
+
+// #Theme Variables
+// ==================================================
+
+   $white: #ffffff;
+   $purple: #990099;
+   $teal: #00cc99;
+   $olive: #cccc66;
+   $yellow: #fdad35;
 
 // #Reset & Basics (Inspired by E. Meyers)
 // ==================================================
@@ -59,6 +70,47 @@
 		border-collapse: collapse;
 		border-spacing: 0;
 	}
+
+// #Buttons
+// ==================================================
+
+.button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+  padding: 15px;
+  color: $white;
+  font-weight: bold;
+  width: auto;
+  
+  &:active {
+    @include box-shadow(inset 0px 0px 200px rgba(0,0,0,0.1));
+  }
+  
+  &.raised {
+    @include box-shadow(inset 0px -4px 0px rgba(0,0,0,0.2));
+    @include text-shadow(0px -2px 0px rgba(0,0,0,0.2));
+    &:active {
+      position: relative;
+      top: 2px;
+      @include box-shadow(inset 0px -2px 0px rgba(0,0,0,0.2));
+      @include text-shadow(0px -1px 0px rgba(0,0,0,0.2));
+    }
+  }
+  
+  &.rounded {
+    @include border-radius(50px);
+  }
+  
+  &.small { font-size: 0.85em; padding: 4px; }
+  &.large { font-size: 1.4em; padding: 25px; }
+  
+  &.purple { background: $purple; }
+  &.teal { background: $teal; }
+  &.olive { background: $olive; }
+  &.yellow { background: $yellow; }
+}
 
 // #Typography
 // ==================================================
